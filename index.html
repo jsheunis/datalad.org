@@ -30,7 +30,7 @@
       <ul class="menu-items">
         <li><a onclick="closeMenu()" href="#resources" >resources</a></li>
         <li><a onclick="closeMenu()" href="#integrate" >use cases</a></li>
-        <li><a onclick="closeMenu()" href="https://handbook.datalad.org/en/latest/intro/installation.html" >install datalad</a></li>
+        <li><a onclick="closeMenu()" href="https://handbook.datalad.org/en/latest/intro/installation.html#installation-and-configuration" >install datalad</a></li>
         <li><a onclick="closeMenu()" href="#cite" >cite datalad</a></li>
       </ul>
       <ul class="menu-icons">
@@ -76,7 +76,7 @@
   </iframe>
   <div class="overview-buttons">
     <a class="button" href="https://mybinder.org/v2/gh/datalad-handbook/datalad-tutorial-binder/HEAD"><span class="icon-laptop"></span>&nbsp;&nbsp;Try it out</a>
-    <a class="button" href="https://handbook.datalad.org/en/latest/intro/installation.html"><span class="icon-cog"></span>&nbsp;&nbsp;Install DataLad</a>
+    <a class="button" href="https://handbook.datalad.org/en/latest/intro/installation.html#installation-and-configuration"><span class="icon-cog"></span>&nbsp;&nbsp;Install DataLad</a>
     <a class="button" href="http://handbook.datalad.org/en/latest/"><span class="icon-book"></span>&nbsp;&nbsp;Learn More</a>
     <a class="button" href="https://matrix.to/#/#datalad:matrix.org"><span class="icon-users"></span>&nbsp;&nbsp;Join the Community</a>
   </div>
@@ -150,8 +150,8 @@
   <div class="card-img use-datalad">
     <img src="img/console.svg" alt="">
     <div class="typewriter-text">
-      <p style="--n:25; --d:0">datalad create <em>my_dataset</em></p>
-      <p style="--n:28; --d:1">datalad save <em>-m "hello world"</em></p>
+      <p style="--n:26; --d:0">datalad create <em>my_dataset</em></p>
+      <p style="--n:29; --d:1">datalad save <em>-m "hello world"</em></p>
       <p style="--n:26; --d:2">datalad push <em>--to location</em></p>
       <p style="--n:1; --d:3"></p><br>
       <p style="--n:22; --d:3">datalad clone <em>location</em></p>
@@ -223,7 +223,7 @@
     </div>
   </div>
   <div class="selected-tags">
-    <span v-for="tag in search_tags"><span class="tag-button selected"><a @click="removeSearchTag(tag)">{{tag}} <span class="icon-cancel-circled"></span></a></span>&nbsp;</span>
+    <span v-for="tag in search_tags"><span class="tag-button selected"><a @click="removeSearchTag(tag)">{{tag}} <span class="icon-cancel-circled inner-icon"></span></a></span>&nbsp;</span>
   </div>
   <div v-for="itm in tagFilteredItems" class="item">
     <div v-if="itm.logo" class="item-logo">
@@ -266,16 +266,16 @@
 <div class="learnmore">
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-cog"></span>
+      <a class="icon-cog" href="https://handbook.datalad.org/en/latest/intro/installation.html#installation-and-configuration"></a>
     </div>
     <div class="resource-info">
-      <h3><a href="https://handbook.datalad.org/en/latest/intro/installation.html">Install<br>DataLad</a></h3>
+      <h3><a href="https://handbook.datalad.org/en/latest/intro/installation.html#installation-and-configuration">Install<br>DataLad</a></h3>
       <p class="resource-blurb">Install DataLad and its dependencies on Linux, MacOS, or Windows</p>
     </div>
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-book"></span>
+      <a class="icon-book" href="http://handbook.datalad.org/en/latest/"></a>
     </div>
     <div class="resource-info">
       <h3><a href="http://handbook.datalad.org/en/latest/">DataLad<br>Handbook</a></h3>
@@ -284,7 +284,7 @@
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-users"></span>
+      <a class="icon-users" href="https://matrix.to/#/#datalad:matrix.org"></a>
     </div>
     <div class="resource-info">
       <h3><a href="https://matrix.to/#/#datalad:matrix.org">Community<br>Chat</a></h3>
@@ -293,7 +293,7 @@
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-chat-empty"></span>
+      <a class="icon-chat-empty" href="https://neurostars.org/search?q=datalad%20category%3A1"></a>
     </div>
     <div class="resource-info">
       <h3><a href="https://neurostars.org/search?q=datalad%20category%3A1">Technical<br>Forum</a></h3>
@@ -302,7 +302,7 @@
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-github"></span>
+      <a class="icon-github" href="https://github.com/datalad/datalad"></a>
     </div>
     <div class="resource-info">
       <h3><a href="https://github.com/datalad/datalad">DataLad on<br>GitHub</a></h3>
@@ -311,7 +311,7 @@
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-file-code"></span>
+      <a class="icon-file-code" href="http://docs.datalad.org/en/stable/"></a>
     </div>
     <div class="resource-info">
       <h3><a href="http://docs.datalad.org/en/stable/">Developer<br>Docs</a></h3>
@@ -320,7 +320,7 @@
   </div>
   <div class="resource-item">
     <div class="resource-icon">
-      <span class="icon-laptop"></span>
+      <a class="icon-laptop" href="https://github.com/datalad/tutorials"></a>
     </div>
     <div class="resource-info">
       <h3><a href="https://github.com/datalad/tutorials">DataLad<br>Tutorials</a></h3>
@@ -402,7 +402,7 @@
         </div>
         <div class="footer-right">
           <ul class="footer-links">
-            <li><a class='icon-download-cloud' aria-label='Install DataLad' href="https://handbook.datalad.org/en/latest/intro/installation.html"></a></li>
+            <li><a class='icon-download-cloud' aria-label='Install DataLad' href="https://handbook.datalad.org/en/latest/intro/installation.html#installation-and-configuration"></a></li>
             <li><a class="icon-book" aria-label='Learn with the Handbook' href="http://handbook.datalad.org/en/latest/"></a></li>
             <li><a class="icon-users" aria-label='Join the community' href="https://matrix.to/#/#datalad:matrix.org"></a></li>
             <li><a class="icon-chat-empty" aria-label='Ask a question' href="https://neurostars.org/search?q=datalad%20category%3A1"></a></li>
