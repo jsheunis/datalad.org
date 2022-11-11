@@ -53,13 +53,18 @@
   </div>
   <div class="hero-body">
     <p>distributed data management<br><br>free and open source</p>
-    <a class="button" href="#install"><span class="icon-rocket"></span>&nbsp;&nbsp;Get DataLad</a>
+    <a class="button" href="#install"><span class="icon-rocket"></span>&nbsp;&nbsp;Get DataLad</a><br>
+    <div class="hero-star">
+      <a class="github-button" href="https://github.com/datalad/datalad" data-color-scheme="no-preference: light; light: light; dark: dark_high_contrast;" data-size="large" data-show-count="true" aria-label="Star DataLad on GitHub">Star</a>
+    </div>
   </div>
   <svg class="hero-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
     <polygon points="0,100 100,0 100,100" />
   </svg>
 </div>
 
+<!-- INCLUDE: GITHUB STAR BUTTON SCRIPT -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Enter page content inside div in the article tag -->
 <article>
   <div>
@@ -101,7 +106,7 @@
       <div class="install-code">
         $ pip install datalad-installer<br />
         $ datalad-installer git-annex -m datalad/packages
-        <a class="icon-docs" onclick="copyCode('pip install datalad-installer\ndatalad-installer git-annex -m datalad/packages\npip install datalad')"></a><br />
+        <a class="icon-doc-text" onclick="copyCode('pip install datalad-installer\ndatalad-installer git-annex -m datalad/packages\npip install datalad')"></a><br />
         $ pip install datalad
       </div>
       <p>Depending on your operating system, other installation options are also possible.
@@ -355,6 +360,17 @@
       <p class="resource-blurb">Hands-on tutorials and videos to help you on your DataLad journey</p>
     </div>
   </div>
+  <div class="resource-item">
+    <div class="resource-icon">
+      <a class="icon-doc-text" href="https://psychoinformatics-de.github.io/rdm-course/"></a>
+    </div>
+    <div class="resource-info">
+      <h3><a href="https://psychoinformatics-de.github.io/rdm-course/">DataLad<br />Course</a></h3>
+      <p class="resource-blurb">A course on Research Data Management with DataLad</p>
+    </div>
+  </div>
+
+  
 </div>
 
 <!-- SPACER IMAGE -->
@@ -371,6 +387,7 @@
 
       Additional support has been provided by the US National Institute of Biomedical Imaging and Bioengineering (NIH 1P41EB019936-01A1) via ReproNim,
       the European Union’s Horizon 2020 research and innovation programme under (945539, 826421),
+      the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation, SFB1451-INF),
       and the German federal state of Saxony-Anhalt and the European Regional Development Fund.
     </p>
   </div>
@@ -401,7 +418,7 @@
         <strong>DataLad: distributed system for joint management of code, data, and their relationship.</strong> Journal of Open Source Software, 6(63), 3262, <a href="https://doi.org/10.21105/joss.03262">10.21105/joss.03262</a></em>
     </blockquote>
     <p class="cite-buttons">
-      <a class="button-cite" onclick="copyCitation()"><span class="icon-docs"></span>&nbsp;&nbsp;Copy</a>
+      <a class="button-cite" onclick="copyCitation()"><span class="icon-doc-text"></span>&nbsp;&nbsp;Copy</a>
       <a class="button-cite" href="static/datalad-citation.bib" download="datalad-citation.bib"><span class="icon-quote-left"></span>&nbsp;&nbsp;BibTex</a>
       <a class="button-cite" href="static/datalad-citation.ris" download="datalad-citation.ris"><span class="icon-quote-left"></span>&nbsp;&nbsp;RIS</a>
     </p>
@@ -418,6 +435,19 @@
 
     <footer>
       <div class='footer-main'>
+
+        <div class="contributors-heading">
+          <h3>Join the contributor community</h3>
+          <span class="fading-line"></span>
+        </div>
+        
+        <div class='footer-contributors' id='footer-app'>
+          <div v-for="person in all_contributors" class="contributor" v-bind:style="{ backgroundImage: 'url(' + person['avatar_url'] + ')' }"><a :href="'https://github.com/' + person['login']" ></a></div>
+        </div>
+
+        <span class="fading-line-full"></span>
+        <br>
+
         <div class='footer-head'>
           <img src="img/logo/datalad_logo_yw.svg" alt="DataLad logo">
           <ul>
@@ -449,5 +479,10 @@
       </div>
     </footer>
   </main>
+
+  <!-- INCLUDE: VUEJS -->
+  <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+  <!-- RUN: VUE SCRIPT FOR FOOTER CONTRIBUTORS -->
+  <script src="static/show_contributors.js"></script>
 </body>
 </html>
